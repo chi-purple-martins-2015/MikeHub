@@ -1,0 +1,13 @@
+<div class="index-main">
+  <div class="featured-articles">
+    <h2>Featured Articles</h2>
+    <ul class="articles-list">
+      <% Article.limit(10).each do |article| %>
+        <li><a href="#" class="article-link"><%= article.title %></a></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="recently-added-articles">
+    <h2>Recently Added Articles</h2>
+  </div>
+</div>

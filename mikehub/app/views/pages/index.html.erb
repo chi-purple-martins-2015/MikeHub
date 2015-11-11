@@ -17,5 +17,18 @@
   </div>
   <div class="recently-added-articles">
     <h2>Recently Added Articles</h2>
+    <ul class="articles-list">
+      <% Article.order(created_at: :desc).limit(5).each do |article| %>
+        <li>
+          <a href="#" class="article-link"><%= article.title %></a>
+          <br>
+          <span class="article-list-subtitle"><%= article.subtitle %></span>
+          <br>
+          <span class="article-list-excerpt"><%= article.content[0..80] %>...</span>
+          <br>
+          <br>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </div>

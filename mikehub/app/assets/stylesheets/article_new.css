@@ -5,17 +5,19 @@
 
 }
 form{
-    border:1px solid red;
-    width:80%; 
+    display: inline-block;
+    width: 85%; 
     margin:0 auto;
     padding: 5% 10% 5% 10%;
     margin-top: 3%;
-    border:1px solid grey;
+    border: 1px solid grey;
 }
 input{
-    display: 
+    line-height: 2.5em;
+    display: block;
     margin-bottom: 3%;
 }
 label{
+    display: block;
     margin-bottom: 3%;
 }

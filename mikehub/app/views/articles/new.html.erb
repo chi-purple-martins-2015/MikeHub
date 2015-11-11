@@ -1,11 +1,14 @@
+<div class="article_new">
+
 <%= form_tag do %>
   <%= form_tag("/articles", method: "post") do %>
-  <%= label_tag(:q, "Title") %>
-  <%= text_field_tag(:q) %>
-  <%= label_tag(:q, "Subtitle") %>
-  <%= text_field_tag(:q) %>
-  <%= label_tag(:q, "Content") %>
-  <%= text_area_tag(:q, size: "24x36") %>
-  <%= submit_tag("Search") %>
+    <%= label_tag :article, "Title" %>
+    <%= text_field(:article, :title, size: 35)%>
+    <%= label_tag :article, "Subtitle" %>
+    <%= text_field(:article,:subtitle, size: 30)  %>
+    <%= label_tag :article, "Content" %>
+    <%= text_area(:article, :content, cols: 40, rows: 30)%>
+    <%= submit_tag "Submit" %>
+  <% end %>
 <% end %>
-<% end %>
+</div>

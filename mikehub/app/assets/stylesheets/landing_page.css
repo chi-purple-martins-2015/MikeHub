@@ -47,3 +47,41 @@ hr {
   margin-top: 10px;
   width: 100%;
 }
+
+.index-main {
+  width: 90%;
+  margin-top: 20px;
+}
+
+.featured-articles {
+  float: left;
+  margin-left: 10%;
+  width: 55%;
+}
+
+.recently-added-articles {
+  float: right;
+  margin-left: 2%;
+  width: 30%;
+}
+
+.featured-articles h2, .recently-added-articles h2 {
+  font-family: Helvetica, sans-serif;
+  color: #505353;
+}
+
+.articles-list {
+  list-style-type: none;
+}
+
+.article-link, .article-link:visited {
+  font-family: Helvetica, sans-serif;
+  font-size: 14pt;
+  text-decoration: none;
+  color: rgb(13, 59, 37);
+}
+
+.article-link:hover {
+  color: rgb(38, 171, 107);
+  text-decoration: none;
+}

@@ -1,6 +1,20 @@
 Rails.application.routes.draw do
 
-  resources :articles
+
+  root "pages#index"
+
+  get 'users/new' => 'users#new'
+
+  post 'users/create' => 'users#create'
+
+  get 'users/delete'
+
+  get 'users/show'
+
+  get 'articles/new'
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

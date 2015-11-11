@@ -4,7 +4,7 @@
     margin:0 auto; 
 
 }
-form{
+.article_new form{
     display: inline-block;
     width: 85%; 
     margin:0 auto;
@@ -12,12 +12,12 @@ form{
     margin-top: 3%;
     border: 1px solid grey;
 }
-input{
+.article_new input{
     line-height: 2.5em;
     display: block;
     margin-bottom: 3%;
 }
-label{
+.article_new label{
     display: block;
     margin-bottom: 3%;
 }

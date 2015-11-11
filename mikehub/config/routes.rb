@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   get 'users/new' => 'users#new'
 
+  post 'users/create' => 'users#create'
+
   get 'users/delete'
 
-  get 'users/create'
 
   get 'users/show'
 

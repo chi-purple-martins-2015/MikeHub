@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mikehub</title>
+  <title>MikeHub</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <header>
+    <p class="header-links">Hello, guest! <a href="/login">Log in</a> or <a href="/users/new">Register</a></p>
+    <form class="searchbar" method="post" action="/search">
+      <input type="text" name="search_term">
+      <input type="submit" value="Search">
+    </form>
+    <h1 class="header-title">MikeHub</h1>
+    <hr>
+  </header>
 <%= yield %>
 
 </body>

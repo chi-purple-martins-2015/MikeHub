@@ -52,6 +52,11 @@ Week 7 group project.
 - As an admin, I want to have my own dashboard page for managing these tasks.
 
 ## MVP
-- User can log in & create account
-- User can see all articles
-- User can create articles and RUD their own authored articles
+- User can create account, log in/logout
+- User has a profile
+- User can read any article
+- User can create, update, and destroy their own articles
+- Any user can search by word or author
+- Admin can select feature articles
+- Admin can CRUD any article (regardless if they authored it)
+- Admin dashboard

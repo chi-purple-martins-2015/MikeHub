@@ -1,0 +1,21 @@
+.article_new{
+    width: 80%;
+    height:auto; 
+    margin:0 auto; 
+
+}
+form{
+    border:1px solid red;
+    width:80%; 
+    margin:0 auto;
+    padding: 5% 10% 5% 10%;
+    margin-top: 3%;
+    border:1px solid grey;
+}
+input{
+    display: 
+    margin-bottom: 3%;
+}
+label{
+    margin-bottom: 3%;
+}

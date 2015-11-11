@@ -44,8 +44,9 @@ ActiveRecord::Schema.define(version: 20151111195237) do
     t.string   "email"
     t.boolean  "admin"
     t.string   "img_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   add_foreign_key "edits", "articles"

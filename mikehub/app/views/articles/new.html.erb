@@ -1,0 +1,11 @@
+<%= form_tag do %>
+  <%= form_tag("/articles", method: "post") do %>
+  <%= label_tag(:q, "Title") %>
+  <%= text_field_tag(:q) %>
+  <%= label_tag(:q, "Subtitle") %>
+  <%= text_field_tag(:q) %>
+  <%= label_tag(:q, "Content") %>
+  <%= text_area_tag(:q, size: "24x36") %>
+  <%= submit_tag("Search") %>
+<% end %>
+<% end %>

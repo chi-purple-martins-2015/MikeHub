@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mikehub</title>
+  <title>MikeHub</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <header>
+    <p class="header-links"><a href="/login">Log in</a> | <a href="/users/new">Register</a></p>
+    <form method="post" action="/search">
+      <input type="text" name="search_term">
+      <input type="submit" value="Search">
+    </form>
+    <h1 class="header-title">MikeHub</h1>
+  </header>
 <%= yield %>
 
 </body>

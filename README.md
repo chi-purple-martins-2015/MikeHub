@@ -30,6 +30,7 @@ Week 7 group project.
 ## User stories
 (guests)
 - As a guest, I want to be able to read articles.
+- As a guest, I want to see register/login and possibly see "hello, guest" in the header.
 
 (members)
 - As a user, I want to log in to my own account.
@@ -43,6 +44,9 @@ Week 7 group project.
 - As a user, I want to be able to search by word in article titles/subtitles/content/footnotes.
 - As a user, I want to be able to search by author name.
 - As a user, I want to have my own profile page with articles I've written, edits I've suggested, and my profile picture.
+- As a user, I want to see, "hi, my name" or "hi, my email" displayed by the logout link in the heading when I am logged in.
+- As a user, I want to see a list of who contributed to an article and their contributions at the bottom of an article.
+- As a user, I want to see an index page that displays the links to featured articles and below them links to the first three or four article subheadings. 
 
 (admins)
 - As an admin, I want to select featured articles for the front page.

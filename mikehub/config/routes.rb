@@ -23,6 +23,10 @@ Rails.application.routes.draw do
 
   get 'articles/:id' => 'articles#show', as: "article"
 
+  get 'articles/:id/edit' => 'articles#edit'
+
+  patch 'articles/:id' => 'aricles#update'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

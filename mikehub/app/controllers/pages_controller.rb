@@ -5,6 +5,9 @@ class PagesController < ApplicationController
   end
 
   def search
-    
+    @query = params[:search_term]
+    @title_matches = Article.where('title LIKE ?', '%' + @query + '%')
+    @subtitle_matches = Article.where('subtitle LIKE ?', '%' + @query + '%')
+    @content_matches = Article.where('content LIKE ?', '%' + @query + '%')
   end
 end

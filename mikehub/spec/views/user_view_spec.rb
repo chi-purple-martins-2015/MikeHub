@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'User visits profile' do
-  scenario "sees a list of article titles" do
+  before :each do
     user_params = {first_name: "Joe",
                   last_name: "Jefferson",
                   email: "joe@thejeffersons.org",
@@ -9,12 +9,21 @@ feature 'User visits profile' do
                   password: "password"
     }
 
+
     @user = User.create(user_params)
-    visit '/users/1'
+    @article = @user.articles.create(title:" This is great", content: "Yep, yep.", subtitle: "Wonderful.")
+  end
 
-    page.assert_selector('li.article', :count => 2)
+  scenario "sees a certain number of articles" do
+    visit "/users/#{@user.id}"
 
+    page.assert_selector('li.article', :count => 1)
+  end
 
+  scenario "sees content reflecting the article title" do
+    visit "/users/#{@user.id}"
+
+    expect(page).to have_content("This is great")
 
   end
 end

@@ -3,10 +3,15 @@
 
   <h3>Author matches: </h3>
   <ul class="articles-list">
-    <% @author_matches.each do |author| %>
-      <!-- <%= link_to(user, class: "article-link") do %> -->
+    <% @author_first_matches.each do |author| %>
+      <%= link_to(author, class: "article-link") do %>
         <li><%= author.full_name %></li>
-      <!-- <% end %> -->
+      <% end %>
+    <% end %>
+    <% @author_last_matches.each do |author| %>
+      <%= link_to(author, class: "article-link") do %>
+        <li><%= author.full_name %></li>
+      <% end %>
     <% end %>
   </ul>
 

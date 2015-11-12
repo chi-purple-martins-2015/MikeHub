@@ -4,7 +4,9 @@
     <ul class="articles-list">
       <% @featured_articles.each do |article| %>
         <li>
-          <a href="#" class="article-link"><%= article.title %></a>
+          <%= link_to(article, class: "article-link") do %>
+            <%= article.title %>
+          <% end %>
           <br>
           <span class="article-list-subtitle"><%= article.subtitle %></span>
           <br>
@@ -20,7 +22,9 @@
     <ul class="articles-list">
       <% @recently_added_articles.each do |article| %>
         <li>
-          <a href="#" class="article-link"><%= article.title %></a>
+          <%= link_to(article, class: "article-link") do %>
+            <%= article.title %>
+          <% end %>
           <br>
           <span class="article-list-subtitle"><%= article.subtitle %></span>
           <br>

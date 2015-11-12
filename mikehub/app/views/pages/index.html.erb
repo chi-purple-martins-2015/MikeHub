@@ -2,7 +2,7 @@
   <div class="featured-articles">
     <h2>Featured Articles</h2>
     <ul class="articles-list">
-      <% Article.limit(8).each do |article| %>
+      <% @featured_articles.each do |article| %>
         <li>
           <a href="#" class="article-link"><%= article.title %></a>
           <br>
@@ -18,7 +18,7 @@
   <div class="recently-added-articles">
     <h2>Recently Added Articles</h2>
     <ul class="articles-list">
-      <% Article.order(created_at: :desc).limit(5).each do |article| %>
+      <% @recently_added_articles.each do |article| %>
         <li>
           <a href="#" class="article-link"><%= article.title %></a>
           <br>

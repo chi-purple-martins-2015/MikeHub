@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
   post 'articles/new' => 'articles#create'
 
-  get 'articles/:id' => 'articles#show'
+  get 'articles/:id' => 'articles#show', as: "article"
 
 
 

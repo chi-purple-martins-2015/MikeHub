@@ -1,0 +1,15 @@
+.article_show{
+    margin: 5%;
+    line-height: 1.9em;
+}
+
+.article_show h3{
+    font-size: 2.0em;
+}
+
+.article_show h2{
+    font-size: 1.5em;
+}
+.article_show p{
+    font-size: 1.3em;
+}

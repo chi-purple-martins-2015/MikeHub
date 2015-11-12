@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   get 'articles/:id' => 'articles#show', as: "article"
 
-  get "search/:search_term" => "pages#search"
+  post "search" => "pages#search"
 
   # post "/search"
 

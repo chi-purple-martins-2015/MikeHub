@@ -15,6 +15,7 @@
       <% else %>
         Hello, guest! <%= link_to "Log in", sessions_login_path %> or <%= link_to "Register", users_new_path %>
       <% end %>
+      | <%= link_to "Home", root_path %>
     </p>
     <form class="searchbar" method="post" action="/search">
       <input type="text" name="search_term">

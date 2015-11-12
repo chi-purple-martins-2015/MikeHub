@@ -19,13 +19,13 @@ Rails.application.routes.draw do
 
   get 'articles/new'
 
-  post 'articles/new' => 'articles#create'
+  post 'articles/new' => 'articles#create', as: "articles"
 
   get 'articles/:id' => 'articles#show', as: "article"
 
   get 'articles/:id/edit' => 'articles#edit'
 
-  patch 'articles/:id' => 'aricles#update'
+  patch 'articles/:id/edit' => 'articles#update'
 
   post "search" => "pages#search"
 

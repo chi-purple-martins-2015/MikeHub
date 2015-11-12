@@ -1,21 +1,21 @@
 <div class="article_create_edit"
   <%= form_for @article do |f| %>
 
-  <% if @article.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@article.errors.count, "error") %> prohibited
-        this article from being saved:
-      </h2>
-      <ul>
-        <% @article.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+    <% if @article.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@article.errors.count, "error") %> prohibited
+          this article from being saved:
+        </h2>
+        <ul>
+          <% @article.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div> 
+    <% end %>
 
-  <%= label_tag :article, "Title" %>
+    <%= label_tag :article, "Title" %>
     <%= text_field(:article, :title, size: "80%")%>
     <%= label_tag :article, "Subtitle" %>
     <%= text_field(:article,:subtitle, size: "70%")  %>

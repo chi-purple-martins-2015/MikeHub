@@ -6,7 +6,6 @@ class ArticlesController < ApplicationController
   end
 
   def show
-
   end
 
   def create
@@ -19,14 +18,12 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def show
-  end
-
   def edit
   end
 
   def update 
     @article = Article.find(params[:id])
+    p @article
     if @article.update(article_params)
       redirect_to @article
     else

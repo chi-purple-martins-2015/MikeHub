@@ -12,6 +12,8 @@
     <p class="header-links">
       <% if logged_in? %>
         Hello, <%= current_user.first_name %>! <%= link_to "Log out", sessions_logout_path %> | <%= link_to "Create a new article", articles_new_path %>
+      <% elsif admin_logged_in? %>
+        Hello, <%=  current_admin.first_name %>! <%= link_to "Admin", admin_homepage_path %> | <%= link_to "Log out", sessions_logout_path %>
       <% else %>
         Hello, guest! <%= link_to "Log in", sessions_login_path %> or <%= link_to "Register", users_new_path %>
       <% end %>

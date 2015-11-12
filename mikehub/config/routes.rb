@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   get 'users/delete'
 
-  get 'users/show'
+  get 'users/:id' => 'users#show'
 
   get 'articles/new'
 

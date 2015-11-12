@@ -16,10 +16,10 @@
         Hello, guest! <%= link_to "Log in", sessions_login_path %> or <%= link_to "Register", users_new_path %>
       <% end %>
     </p>
-    <form class="searchbar" method="post" action="/search">
+    <%= form_tag "/search", class: "searchbar", method: :post do %>
       <input type="text" name="search_term">
       <input type="submit" value="Search">
-    </form>
+    <% end %>
     <h1 class="header-title">MikeHub</h1>
     <hr>
   </header>

@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   has_many :edits, foreign_key: :editor_id
   validates_presence_of :first_name
   validates_presence_of :last_name
-  validates_presence_of :email
+  validates_format_of :email, :with => /\A[\w+\-.]+@(dbc|DBC|Dbc|dBc|dbC).com\Z/
 
   has_secure_password
 

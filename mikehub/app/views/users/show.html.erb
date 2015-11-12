@@ -1,8 +1,11 @@
+<div class="user_show">
+
 <h3> <%= @user.first_name %> <%= @user.last_name %> </h3>
   <ul>
     <li> <%= @user.email %> </li>
-    <li> <%= image_tag(@user.img_url) %> </li>
+    <li id ="profile_page_photo"> <%= image_tag(@user.img_url) %> </li>
     <% @articles.each do |article| %>
         <li class="article"> <a href="/articles/<%= article.id %>"> <%= article.title %> </a> </li>
      <% end %>
   </ul>
+</div>

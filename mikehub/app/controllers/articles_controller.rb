@@ -4,6 +4,10 @@ class ArticlesController < ApplicationController
   def new
   end
 
+  def show
+
+  end
+
   def create
     @article = Article.create(article_params)
     if @article.valid?

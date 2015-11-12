@@ -22,6 +22,9 @@ class ArticlesController < ApplicationController
   def show
   end
 
+  def update 
+  end
+
   private
 
   def set_article

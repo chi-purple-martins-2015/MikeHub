@@ -1,5 +1,15 @@
 <div class="index-main search-results-container">
   <h2>Search results matching <em><%= @query %></em></h2>
+
+  <h3>Author matches: </h3>
+  <ul class="articles-list">
+    <% @author_matches.each do |article| %>
+      <%= link_to(article, class: "article-link") do %>
+        <li><%= article.author.full_name %></li>
+      <% end %>
+    <% end %>
+  </ul>
+
   <h3>Title matches: </h3>
   <ul class="articles-list">
     <% @title_matches.each do |article| %>

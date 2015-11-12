@@ -5,27 +5,28 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
-  def show
-  end
-
   def create
-    @article = Article.create(article_params)
+    @article = Article.new(article_params)
     if @article.valid?
-      redirect_to root_path
+      @article.save
+      redirect_to @articles
     else
       @errors = @article.errors.full_messages
-      render "/articles/new"
+      render 'new'
     end
+  end
+  
+  def show
   end
 
   def edit
   end
 
   def update 
-    @article = Article.find(params[:id])
+    @article = Article.find(article_params)
     p @article
     if @article.update(article_params)
-      redirect_to @article
+      redirect_to @articles
     else
       render 'edit'
     end
@@ -38,7 +39,7 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :subtitle, :body)
+    params.require(:article).permit(:title, :subtitle, :content)
   end
 
 end

@@ -22,3 +22,9 @@
     display: block;
     margin-bottom: 3%;
 }
+
+.article_create_edit input[type="submit"]{
+    border: 3px solid black;
+    margin-top: 2%;
+    padding: 2%;
+}

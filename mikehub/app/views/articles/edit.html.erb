@@ -1,9 +1,11 @@
-<%= form_for @article do |f| %>
-  <%= label_tag :article, "Title" %>
-  <%= text_field(:article, :title, size: "80%")%>
-  <%= label_tag :article, "Subtitle" %>
-  <%= text_field(:article,:subtitle, size: "70%")  %>
-  <%= label_tag :article, "Content" %>
-  <%= text_area(:article, :content, size: "90%x70%")%>
-  <%= submit_tag "Submit" %>
-<%  end %>
+<div class="article_create_edit">
+  <%= form_for @article do |f| %>
+    <%= label_tag :article, "Title" %>
+    <%= text_field(:article, :title, size: "80%")%>
+    <%= label_tag :article, "Subtitle" %>
+    <%= text_field(:article,:subtitle, size: "70%")  %>
+    <%= label_tag :article, "Content" %>
+    <%= text_area(:article, :content, size: "95%x30%")%>
+    <%= submit_tag "Submit" %>
+  <% end %>
+</div>

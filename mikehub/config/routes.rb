@@ -27,6 +27,10 @@ Rails.application.routes.draw do
 
   patch 'articles/:id' => 'aricles#update'
 
+  post "search" => "pages#search"
+
+  # post "/search"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

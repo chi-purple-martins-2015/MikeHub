@@ -1,0 +1,26 @@
+.user-form-div {
+
+  width: 500px;
+  margin: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+
+}
+
+.user-form-div p input {
+  border-radius: 5px;
+  border-color: rgb(61, 230, 189);
+}
+
+.user-form-div p {
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  color: #505353;
+
+}
+h2 {
+  color: rgb(38, 171, 107);
+  text-decoration: none;
+  text-align: center;
+      font-family: 'Roboto Slab', serif;
+}

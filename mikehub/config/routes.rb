@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
 
-  get 'sessions/login'
+  get 'sessions/login' => 'sessions#login'
 
-  get 'sessions/create'
+  post 'sessions/create' => 'sessions#create'
 
-  get 'sessions/logout'
+  get 'sessions/logout' => 'sessions#logout'
 
   root "pages#index"
 

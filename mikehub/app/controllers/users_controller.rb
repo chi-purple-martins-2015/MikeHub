@@ -3,8 +3,7 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def delete
-  end
+
 
   def create
     @user = User.new(user_params)
@@ -13,10 +12,10 @@ class UsersController < ApplicationController
     else
       render "new"
     end
-
   end
 
-  def show
+
+  def delete
   end
 
   private

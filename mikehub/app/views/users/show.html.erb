@@ -1,2 +1,9 @@
-<h1>Users#show</h1>
-<h1>
+<h3> <%= @user.first_name %> <%= @user.last_name %> </h3>
+  <ul>
+    <li> $<%= @user.email %> </li>
+    <li> <%= @user.img_url %> </li>
+    <li> <%= @user.description %> </li>
+    <% @articles.each do |article| %>
+        <li> <%= article.name %> </li>
+     <% end %>
+  </ul>

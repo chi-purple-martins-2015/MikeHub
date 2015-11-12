@@ -2,8 +2,7 @@
   <ul>
     <li> $<%= @user.email %> </li>
     <li> <%= @user.img_url %> </li>
-    <li> <%= @user.description %> </li>
     <% @articles.each do |article| %>
-        <li> <%= article.name %> </li>
+        <li> <%= article.title %> </li>
      <% end %>
   </ul>

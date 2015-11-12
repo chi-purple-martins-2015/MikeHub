@@ -9,7 +9,13 @@
 </head>
 <body>
   <header>
-    <p class="header-links">Hello, guest! <a href="/login">Log in</a> or <a href="/users/new">Register</a></p>
+    <p class="header-links">
+      <% if logged_in? %>
+        Hello, <%= current_user.first_name %>! <%= link_to "Log out", sessions_logout_path %> | <%= link_to "Create a new article", articles_new_path %>
+      <% else %>
+        Hello, guest! <%= link_to "Log in", sessions_login_path %> or <%= link_to "Register", users_new_path %>
+      <% end %>
+    </p>
     <form class="searchbar" method="post" action="/search">
       <input type="text" name="search_term">
       <input type="submit" value="Search">

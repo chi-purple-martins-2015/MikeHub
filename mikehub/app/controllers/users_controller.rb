@@ -15,6 +15,12 @@ class UsersController < ApplicationController
   end
 
 
+  def show
+    @user = User.find_by(id: params[:id])
+    @articles = @user.articles
+  end
+
+
   def delete
   end
 

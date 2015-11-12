@@ -2,6 +2,11 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:edit, :show]
 
   def new
+    @article = Article.new
+  end
+
+  def show
+
   end
 
   def create
@@ -12,6 +17,9 @@ class ArticlesController < ApplicationController
       @errors = @article.errors.full_messages
       render "/articles/new"
     end
+  end
+
+  def show
   end
 
   private

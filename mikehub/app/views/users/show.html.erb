@@ -3,6 +3,6 @@
     <li> $<%= @user.email %> </li>
     <li> <%= @user.img_url %> </li>
     <% @articles.each do |article| %>
-        <li> <a href="/articles/<%= article.id %>"> <%= article.title %> </a> </li>
+        <li class="article"> <a href="/articles/<%= article.id %>"> <%= article.title %> </a> </li>
      <% end %>
   </ul>

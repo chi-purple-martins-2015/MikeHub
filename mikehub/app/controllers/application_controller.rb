@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   end
 
   def admin_logged_in?
-    session[:user_id].present? && current_user[:admin]
+    logged_in? && session[:admin_id].present? #current_user[:admin]
   end
 
   def logged_in?

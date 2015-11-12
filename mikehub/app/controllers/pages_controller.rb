@@ -6,7 +6,10 @@ class PagesController < ApplicationController
 
   def search
     @query = params[:search_term]
-    @author_matches = User.where('(first_name || ' ' || last_name) LIKE ?', '%' + @query + '%')
+
+    @author_first_matches = User.where('first_name LIKE ?', '%' + @query + '%')
+    @author_last_matches = User.where('last_name LIKE ?', '%' + @query + '%')
+
     @title_matches = Article.where('title LIKE ?', '%' + @query + '%')
     @subtitle_matches = Article.where('subtitle LIKE ?', '%' + @query + '%')
     @content_matches = Article.where('content LIKE ?', '%' + @query + '%')

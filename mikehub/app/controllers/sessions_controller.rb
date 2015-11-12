@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(user_params[:password])
 
       session[:user_id] = user.id
-      redirect_to '/users/new'
+      redirect_to '/'
     else
 
       render :login
@@ -22,6 +22,7 @@ class SessionsController < ApplicationController
 
   def logout
     session[:user_id] = nil
+    redirect_to '/'
   end
 
   private

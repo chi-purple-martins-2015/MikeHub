@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
   end
 
+  def admin_logged_in?
+    session[:user_id].present? && @current_user.admin
+  end
+
   def logged_in?
     session[:user_id].present?
   end

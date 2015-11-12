@@ -1,23 +1,30 @@
-.article_new{
+.article_create_edit{
     width: 80%;
     height:auto; 
     margin:0 auto; 
 
 }
-.article_new form{
+.article_create_edit form{
     display: inline-block;
     width: 85%; 
     margin:0 auto;
+    margin-top: 5%;
     padding: 5% 10% 5% 10%;
     margin-top: 3%;
     border: 1px solid grey;
 }
-.article_new input{
+.article_create_edit input{
     line-height: 2.5em;
     display: block;
     margin-bottom: 3%;
 }
-.article_new label{
+.article_create_edit label{
     display: block;
     margin-bottom: 3%;
+}
+
+.article_create_edit input[type="submit"]{
+    border: 3px solid black;
+    margin-top: 2%;
+    padding: 2%;
 }

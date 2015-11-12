@@ -4,4 +4,5 @@ class Article < ActiveRecord::Base
   has_many :editors, through: :edits, source: :editor
 
   validates :title, presence: true
+  
 end

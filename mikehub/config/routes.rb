@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
 
+  get 'sessions/login'
+
+  get 'sessions/create'
+
+  get 'sessions/logout'
+
   root "pages#index"
 
   get 'users/new' => 'users#new'

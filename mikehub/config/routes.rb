@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
   get 'sessions/login' => 'sessions#login'
 
   post 'sessions/create' => 'sessions#create'
@@ -15,13 +14,17 @@ Rails.application.routes.draw do
 
   get 'users/delete'
 
-  get 'users/:id' => 'users#show'
+  get 'users/:id' => 'users#show', as: "user"
 
   get 'articles/new'
 
-  post 'articles/new' => 'articles#create'
+  post 'articles' => 'articles#create', as: "articles"
 
   get 'articles/:id' => 'articles#show', as: "article"
+
+  get 'articles/:id/edit' => 'articles#edit', as: "edit_article"
+
+  patch 'articles/:id' => 'articles#update'
 
   post "search" => "pages#search"
 

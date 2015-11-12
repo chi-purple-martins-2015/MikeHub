@@ -9,20 +9,20 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     if @article.valid?
       @article.save
-      redirect_to root_path
+      redirect_to @article
     else
       @errors = @article.errors.full_messages
       render 'new'
     end
   end
-  
+
   def show
   end
 
   def edit
   end
 
-  def update 
+  def update
     @article = Article.find(params[:id])
     p @article
     if @article.update(article_params)

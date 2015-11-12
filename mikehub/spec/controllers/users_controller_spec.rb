@@ -21,7 +21,7 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
-  context "when invalid credencials are passed" do
+  context "when invalid credentials are passed" do
     it "renders new"  do
      post :create, {user: {first_name: "josue", last_name: "aceves"}}
       expect(response).to render_template(:new)

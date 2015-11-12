@@ -1,0 +1,23 @@
+.article_new{
+    width: 80%;
+    height:auto; 
+    margin:0 auto; 
+
+}
+.article_new form{
+    display: inline-block;
+    width: 85%; 
+    margin:0 auto;
+    padding: 5% 10% 5% 10%;
+    margin-top: 3%;
+    border: 1px solid grey;
+}
+.article_new input{
+    line-height: 2.5em;
+    display: block;
+    margin-bottom: 3%;
+}
+.article_new label{
+    display: block;
+    margin-bottom: 3%;
+}

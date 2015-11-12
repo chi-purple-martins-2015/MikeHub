@@ -1,0 +1,14 @@
+<div class="article_new">
+
+<%= form_tag do %>
+  <%= form_tag("/articles", method: "post") do %>
+    <%= label_tag :article, "Title" %>
+    <%= text_field(:article, :title, size: "80%")%>
+    <%= label_tag :article, "Subtitle" %>
+    <%= text_field(:article,:subtitle, size: "70%")  %>
+    <%= label_tag :article, "Content" %>
+    <%= text_area(:article, :content, size: "90%x70%")%>
+    <%= submit_tag "Submit" %>
+  <% end %>
+<% end %>
+</div>

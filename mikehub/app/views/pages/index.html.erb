@@ -10,7 +10,7 @@
           <br>
           <span class="article-list-subtitle"><%= article.subtitle %></span>
           <br>
-          <span class="article-list-excerpt"><%= short_body(article.content) %>...</span>
+          <span class="article-list-excerpt"><%= feature_articles(article.content) %>...</span>
           <br>
           <br>
         </li>
@@ -27,6 +27,8 @@
           <% end %>
           <br>
           <span class="article-list-subtitle"><%= article.subtitle %></span>
+          <br>
+           <span class="article-list-subtitle"><%= recent_articles(article.content) %></span>
           <br>
 
         </li>

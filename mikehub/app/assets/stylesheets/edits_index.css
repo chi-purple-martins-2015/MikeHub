@@ -1,0 +1,22 @@
+.edits-index {
+  width: 80%;
+  padding-left: 2em;
+}
+
+.edits-index a, a:visited {
+  color: rgb(38, 171, 107);
+  text-decoration: none;
+}
+
+.edits-index a:hover {
+  color: rgb(13, 59, 37);
+  font-weight: bolder;
+}
+
+.link-to-edit {
+  margin-bottom: 0px;
+}
+
+.edit-byline {
+  margin-top: 1px;
+}

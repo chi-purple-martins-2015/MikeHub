@@ -21,7 +21,14 @@ class UsersController < ApplicationController
   end
 
 
-  def delete
+  def destroy
+    if admin_logged_in?
+      @user = User.find_by(id: params[:id])
+      @user.destroy
+      redirect_to root_path
+    else
+      flash[:error] = "You are not authorized to view that page."
+    end
   end
 
   private

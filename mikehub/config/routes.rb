@@ -12,10 +12,7 @@ Rails.application.routes.draw do
 
   post 'users/create' => 'users#create'
 
-  delete 'users/:id' => '/admins/user#destroy'
-  # namespace :admin do
-  #   delete 'users/:id' => 'admin/users#destroy'
-  # end
+  delete 'users/:id' => 'users#destroy', as: "user_delete"
 
   get 'users/:id' => 'users#show', as: "user"
 
@@ -31,10 +28,7 @@ Rails.application.routes.draw do
 
   post "search" => "pages#search"
 
-  # delete 'admin/users/:id' => 'users#delete'
 
-
-  # post "/search"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

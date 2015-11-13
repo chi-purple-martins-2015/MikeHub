@@ -31,8 +31,8 @@ Rails.application.routes.draw do
   # ***** Katelyn edit routes below *****
 
   get "articles/:article_id/edits/new" => "edits#new"
-  post "articles/:article_id/edits" => "edits#create", as: "edits"
-  get "edits/:id" => "edits#show"
+  post "articles/:article_id/edits" => "edits#create", as: "article_edits"
+  get "edits/:id" => "edits#show", as: "edit"
 
 
 

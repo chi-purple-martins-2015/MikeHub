@@ -2,5 +2,20 @@
 
   <h3><%= @edit.title %></h3>
   <h2><%= @edit.subtitle %></h2>
+  <span class="article-byline">
+    Edit suggested by <%= link_to @edit.editor.full_name, user_path %>.
+    Original article can be found <%= link_to "here", @article %>
+  </span>
+  <br>
+  <span class="article-byline">
+    This edit 
+    <% if @edit.accepted %>
+      has
+    <% else %>
+      has not yet
+    <% end %>
+    been accepted by the article's author.
+  </span>
   <p><%= @edit.content.html_safe %></p>
+
 </div>

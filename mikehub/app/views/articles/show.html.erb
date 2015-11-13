@@ -3,6 +3,7 @@
     <% if current_user.articles.include?(@article) || current_user.admin %>
       <%= link_to 'Edit this article', new_edit_path(@article) %>
        | <%= link_to 'Delete this article', article_delete_path(@article), method: :delete %>
+       | <%= link_to 'View suggested edits', view_all_edits_path(@article) %>
     <% else %>
       <%= link_to 'Suggest an edit to this article', new_edit_path(@article) %>
     <% end %>

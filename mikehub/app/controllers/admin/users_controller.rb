@@ -1,7 +1,8 @@
-class Admin:UsersController < ApplicationController
+class Admin::UsersController < ApplicationController
   before_filter :authorized?
 
   def show
+    @user = User.find_by(id: params[:id])
   end
 
   def delete
@@ -10,6 +11,7 @@ class Admin:UsersController < ApplicationController
   end
 
   private
+
   def authorized?
     unless admin_logged_in?
       flash[:error] = "You are not authorized to view that page."

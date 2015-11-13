@@ -5,6 +5,10 @@ class Admin::UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
   end
 
+  def index
+    @all_users = User.all
+  end
+
   def delete
     @target_user = User.find_by(id: user_id)
     @target_user.destroy

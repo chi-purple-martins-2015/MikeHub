@@ -2,7 +2,7 @@
   <p class="edit-note">
     Note: This file is a suggested edit to an existing article.
     <br>
-    <% if current_user.articles.include?(@article) %>
+    <% if current_user.articles.include?(@article) || current_user.admin %>
       <% if @edit.accepted %>
         Status: Accepted on <%= @edit.updated_at.strftime('%B %e, %Y') %>
       <% else %>

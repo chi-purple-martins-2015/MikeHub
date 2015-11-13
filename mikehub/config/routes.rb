@@ -34,7 +34,11 @@ Rails.application.routes.draw do
 
   get "articles/:article_id/edits/new" => "edits#new", as: "new_edit"
   post "articles/:article_id/edits" => "edits#create", as: "article_edits"
+
+  get "articles/:article_id/edits" => "edits#index", as: "view_all_edits" 
+
   get "edits/:id" => "edits#show", as: "edit"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

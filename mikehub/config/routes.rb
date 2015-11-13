@@ -26,6 +26,8 @@ Rails.application.routes.draw do
 
   patch 'articles/:id' => 'articles#update'
 
+  delete 'articles/:id' => 'articles#destroy', as: 'article_delete'
+
   post "search" => "pages#search"
 
 

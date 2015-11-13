@@ -8,6 +8,7 @@
 }
 
 .user-form-div p input {
+  height: 1.8em;
   border-radius: 5px;
   border-color: rgb(61, 230, 189);
 }
@@ -18,6 +19,12 @@
   color: #505353;
 
 }
+
+.user-form-div input[type="submit"]{
+  margin: 3%;
+}
+
+
 h2 {
   color: rgb(38, 171, 107);
   text-decoration: none;

@@ -30,6 +30,7 @@ Rails.application.routes.draw do
 
   post "search" => "pages#search"
 
+
   # ***** Katelyn edit routes below *****
 
   get "articles/:article_id/edits/new" => "edits#new", as: "new_edit"
@@ -39,6 +40,11 @@ Rails.application.routes.draw do
 
   get "edits/:id" => "edits#show", as: "edit"
 
+
+  namespace :admin do
+    patch "users/:user_id" => "users#make_admin"
+    resources :users, :articles
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

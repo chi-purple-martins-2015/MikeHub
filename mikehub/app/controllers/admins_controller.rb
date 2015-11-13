@@ -1,5 +1,8 @@
-class AdminsController < ApplicationController
+class Admin:UsersController < ApplicationController
   before_filter :authorized?
+
+  def show
+  end
 
   def delete
     @target_user = User.find_by(id: user_id)

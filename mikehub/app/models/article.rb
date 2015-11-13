@@ -4,5 +4,9 @@ class Article < ActiveRecord::Base
   has_many :editors, through: :edits, source: :editor
 
   validates :title, presence: true
-  
+
+  def has_edits?
+    self.edits.count > 0
+  end
+
 end

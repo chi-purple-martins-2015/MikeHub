@@ -30,6 +30,9 @@ Rails.application.routes.draw do
 
   post "search" => "pages#search"
 
+  namespace :admin do
+    resources :users, :articles
+  end
 
 
   # The priority is based upon order of creation: first created -> highest priority.

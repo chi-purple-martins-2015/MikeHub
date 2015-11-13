@@ -1,4 +1,9 @@
 class EditsController < ApplicationController
+  def index
+    @article = Article.find(params[:article_id])
+    @edits = @article.edits.order(:created_at => :desc)
+  end
+
   def new
     @article = Article.find(params[:article_id])
     @edit = Edit.new(title: @article.title, subtitle: @article.subtitle, content: @article.content)

@@ -19,11 +19,13 @@
     <span class="article-byline">
       Contributors:
       <% @edits.each do |edit| %>
-        <span>
-          <%= link_to(edit.editor) do %>
-            <%= edit.editor.full_name %>
-          <% end %>
-        </span>
+          <span>
+            <% if edit.accepted %>
+              <%= link_to(edit.editor) do %>
+                <%= edit.editor.full_name %>
+              <% end %>
+            <% end %>
+          </span>
       <% end %>
     </span>
   <% end %>

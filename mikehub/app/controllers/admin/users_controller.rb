@@ -14,6 +14,12 @@ class Admin::UsersController < ApplicationController
     @target_user.destroy
   end
 
+  def make_admin
+    @user = User.find_by(id: params[:id])
+    @user.admin = true
+    redirect_to admin_user_path(current_user)
+  end
+
   private
 
   def authorized?

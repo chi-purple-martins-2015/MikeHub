@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   post "search" => "pages#search"
 
   namespace :admin do
+    patch "users/:user_id" => "users#make_admin"
     resources :users, :articles
   end
 

@@ -4,6 +4,9 @@ header {
   font-family: Helvetica, sans-serif;
   font-size: 10pt;
 }
+body {
+  background-color: #F5F5F5;
+}
 
 .header-links {
   float: left;

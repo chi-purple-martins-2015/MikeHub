@@ -32,6 +32,14 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def delete
+    @article = Article.find(params[:id])
+    @article.destroy
+   
+    redirect_to root_path
+    
+  end
+
   private
 
   def set_article

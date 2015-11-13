@@ -9,3 +9,7 @@
      <% end %>
   </ul>
 </div>
+
+<% if admin_logged_in? %>
+  Delete this user by clicking <%= link_to "delete", user_delete_path(@user), method: :delete, data:{confirm: 'Are you sure you want to delete this user?'} %>
+<% end %>

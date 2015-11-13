@@ -1,10 +1,18 @@
 <div class="article_show">
-  <p class="edit-note">Note: This file is a suggested edit to an existing article. If you are the author of the original article, you can log in to review and accept this edit.</p>
+  <p class="edit-note">
+    Note: This file is a suggested edit to an existing article.
+    <br>
+    <% if current_user.articles.include?(@article) %>
+      <%= link_to "Click here", update_article_path(@article, @edit), method: :patch %> to accept this edit. (This will update the article to incorporate the changes below.)
+    <% else %>
+      If you are the author of the original article, you can log in to review and accept this edit.
+    <% end %>
+  </p>
 
   <h3><%= @edit.title %></h3>
   <h2><%= @edit.subtitle %></h2>
   <span class="article-byline">
-    Edit suggested by <%= link_to @edit.editor.full_name, user_path %>.
+    Edit suggested by <%= link_to @edit.editor.full_name, user_path(@edit.editor) %>.
     Original article can be found <%= link_to "here", @article %>
   </span>
   <br>

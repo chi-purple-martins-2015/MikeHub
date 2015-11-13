@@ -4,7 +4,7 @@
     <br>
     <% if current_user.articles.include?(@article) %>
       <% if @edit.accepted %>
-        Status: Accepted
+        Status: Accepted on <%= @edit.updated_at.strftime('%B %e, %Y') %>
       <% else %>
         <%= link_to "Click here", update_article_path(@article, @edit), method: :patch %> to accept this edit. (This will update the article to incorporate the changes below.)
       <% end %>

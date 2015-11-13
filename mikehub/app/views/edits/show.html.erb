@@ -3,7 +3,11 @@
     Note: This file is a suggested edit to an existing article.
     <br>
     <% if current_user.articles.include?(@article) %>
-      <%= link_to "Click here", update_article_path(@article, @edit), method: :patch %> to accept this edit. (This will update the article to incorporate the changes below.)
+      <% if @edit.accepted %>
+        Status: Accepted
+      <% else %>
+        <%= link_to "Click here", update_article_path(@article, @edit), method: :patch %> to accept this edit. (This will update the article to incorporate the changes below.)
+      <% end %>
     <% else %>
       If you are the author of the original article, you can log in to review and accept this edit.
     <% end %>

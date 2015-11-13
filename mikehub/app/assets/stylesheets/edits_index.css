@@ -20,3 +20,13 @@
 .edit-byline {
   margin-top: 1px;
 }
+
+.edit-note {
+  font-size: 0.5em;
+  font-color: rgb(145, 145, 145);
+  font-style: italic;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}

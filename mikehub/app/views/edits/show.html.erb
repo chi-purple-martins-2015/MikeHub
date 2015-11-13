@@ -1,4 +1,5 @@
 <div class="article_show">
+  <p class="edit-note">Note: This file is a suggested edit to an existing article. If you are the author of the original article, you can log in to review and accept this edit.</p>
 
   <h3><%= @edit.title %></h3>
   <h2><%= @edit.subtitle %></h2>
@@ -8,7 +9,7 @@
   </span>
   <br>
   <span class="article-byline">
-    This edit 
+    This edit
     <% if @edit.accepted %>
       has
     <% else %>

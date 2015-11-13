@@ -1,7 +1,33 @@
-.admin-users-index {
+/*.admin-users-index {
   border: solid black thick;
-}
+}*/
 
 .admin-users-index li a {
   text-decoration: none;
+}
+
+ .admin-users-index  #users-list ul li a  {
+  border-bottom: thin gray;
+  border-bottom: solid thin gray ;
+}
+
+.admin-users-index  #users-list ul   {
+  list-style: none;
+}
+
+
+
+
+
+.admin-users-index #users-list {
+  width: 30%;
+  margin-left: 40%;
+}
+
+
+.admin-users-index h2 {
+  /*border: solid black thick;*/
+  /*text-align: center;*/
+  width: 300px;
+  margin-left: 32%;
 }

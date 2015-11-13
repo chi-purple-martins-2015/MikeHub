@@ -1,0 +1,7 @@
+.admin-users-index {
+  border: solid black thick;
+}
+
+.admin-users-index li a {
+  text-decoration: none;
+}

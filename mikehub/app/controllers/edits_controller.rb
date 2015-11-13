@@ -5,13 +5,16 @@ class EditsController < ApplicationController
   end
 
   def create
+    @article = Article.find(params[:article_id])
     @edit = Edit.create(edit_params)
     current_user.edits << @edit
+    @article.edits << @edit
     redirect_to @edit
   end
 
   def show
     @edit = Edit.find(params[:id])
+    @article = Article.find(@edit.article.id)
   end
 
   private

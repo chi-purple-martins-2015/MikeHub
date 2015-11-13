@@ -1,12 +1,6 @@
-require 'nokogiri'
-require 'open-uri'
+
 
 module ArticlesHelper
-
-
-
-
-
   def make_html(string)
     string.html_safe
   end

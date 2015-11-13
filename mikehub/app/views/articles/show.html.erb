@@ -1,11 +1,16 @@
 <div class="article_show">
   <% if logged_in? %>
-    <%= link_to 'Edit', edit_article_path(@article) %>
-    <%= link_to 'Delete', article_delete_path(@article), method: :delete %>
+    <% if current_user.articles.include?(@article) || current_user.admin %>
+      <%= link_to 'Edit this article', new_edit_path(@article) %>
+       | <%= link_to 'Delete this article', article_delete_path(@article), method: :delete %>
+    <% else %>
+      <%= link_to 'Suggest an edit to this article', new_edit_path(@article) %>
+    <% end %>
   <% end %>
 
 
   <h3><%= @article.title %></h3>
   <h2><%= @article.subtitle %></h2>
+  <span class="article-byline">Written by <%= link_to @article.author.full_name, user_path %></span>
   <p><%= @article.content.html_safe %></p>
 </div>

@@ -17,26 +17,25 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @edits = @article.edits
   end
 
   def edit
   end
 
   def update
-    @article = Article.find(params[:id])
-    p @article
-    if @article.update(article_params)
-      redirect_to article_path(@article)
-    else
-      render 'edit'
-    end
+    @article = Article.find(params[:article_id])
+    @edit = Edit.find(params[:id])
+    @article.update_attributes(title: @edit.title, subtitle: @edit.subtitle, content: @edit.content)
+    @edit.update_attribute(:accepted, true)
+    redirect_to @article
   end
 
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
-   
-    redirect_to root_path   
+
+    redirect_to root_path
   end
 
   private
@@ -50,4 +49,3 @@ class ArticlesController < ApplicationController
   end
 
 end
-

@@ -1,17 +1,25 @@
 class EditsController < ApplicationController
+  def index
+    @article = Article.find(params[:article_id])
+    @edits = @article.edits.order(:created_at => :desc)
+  end
+
   def new
-    @edit = Edit.new
+    @article = Article.find(params[:article_id])
+    @edit = Edit.new(title: @article.title, subtitle: @article.subtitle, content: @article.content)
   end
 
   def create
-    @edit = Edit.new(edit_params)
-    if @edit.valid?
-      @edit.save
-      redirect_to @edit
-    else
-      @errors = @edit.errors.full_messages
-      render 'new'
-    end
+    @article = Article.find(params[:article_id])
+    @edit = Edit.create(edit_params)
+    current_user.edits << @edit
+    @article.edits << @edit
+    redirect_to @edit
+  end
+
+  def show
+    @edit = Edit.find(params[:id])
+    @article = Article.find(@edit.article.id)
   end
 
   private

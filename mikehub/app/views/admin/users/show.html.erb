@@ -1,0 +1,12 @@
+<% if admin_logged_in? %>
+
+  <div class="admin_show">
+    <h3> Hello, <%= @user.first_name %> !  Welcome to the admin dashboard </h3>
+    <ul>
+      <li> Click here to see all <%= link_to "users", admin_users_path %> </li>
+    </ul>
+  </div>
+
+<% else %>
+  flash[:error] = "You are not authorized to view that page."
+<% end %>

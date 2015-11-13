@@ -1,0 +1,14 @@
+<div class="edits-index">
+  <h3>Suggested edits for <%= link_to @article.title, article_path(@article) %></h3>
+  <% @edits.each do |edit| %>
+    <p>
+      <span class="link-to-edit">
+        <%= link_to(edit) do %>
+          <%= edit.created_at.strftime('%B %e, %Y') %>
+        <% end %>
+      </span>
+      <br>
+      <span class="article-byline edit-byline">Edit suggested by <%= edit.editor.full_name %></span>
+    </p>
+  <% end %>
+</div>

@@ -1,18 +1,18 @@
 <div style="width: 900px; margin:auto;">
-<%= form_for @edit do |f| %>
+<%= form_for [@article, @edit], method: :post do |f| %>
   <p><%= label_tag "Article title" %>:
   <%= f.text_field :title %>
   <%= label_tag "Article Subtitle" %>:
   <%= f.text_field :subtitle %></p>
-<textarea name="article[content]" >
-
+<textarea name="edit[content]" >
+  <%= @edit.content %>
 
 </textarea>
-<%= submit_tag "Submit" %>
+<%= submit_tag "Submit", id: "article-submit" %>
 <% end %>
 
 
 <script>
-    CKEDITOR.replace( 'article[content]' );
+    CKEDITOR.replace( 'edit[content]' );
 </script>
 <div>

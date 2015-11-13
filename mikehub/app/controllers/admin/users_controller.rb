@@ -15,8 +15,10 @@ class Admin::UsersController < ApplicationController
   end
 
   def make_admin
-    @user = User.find_by(id: params[:id])
+    @user = User.find_by(id: params[:user_id])
+    p @user
     @user.admin = true
+    @user.save
     redirect_to admin_user_path(current_user)
   end
 

@@ -1,5 +1,5 @@
 10.times do
-  User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, admin: false, img_url: Faker::Avatar.image, password: "password")
+  User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.user_name + "@dbc.com", admin: false, img_url: Faker::Avatar.image, password: "password")
 end
 
 30.times do

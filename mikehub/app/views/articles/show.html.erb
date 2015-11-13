@@ -13,5 +13,18 @@
   <h3><%= @article.title %></h3>
   <h2><%= @article.subtitle %></h2>
   <span class="article-byline">Written by <%= link_to @article.author.full_name, user_path(@article.author) %></span>
+  <br>
+  <% if @article.has_edits? %>
+    <span class="article-byline">
+      Contributors:
+      <% @edits.each do |edit| %>
+        <span>
+          <%= link_to(edit.editor) do %>
+            <%= edit.editor.full_name %>
+          <% end %>
+        </span>
+      <% end %>
+    </span>
+  <% end %>
   <p><%= @article.content.html_safe %></p>
 </div>

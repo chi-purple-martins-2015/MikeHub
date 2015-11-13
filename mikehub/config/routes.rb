@@ -24,12 +24,20 @@ Rails.application.routes.draw do
 
   get 'articles/:id/edit' => 'articles#edit', as: "edit_article"
 
-  patch 'articles/:id' => 'articles#update'
+  patch 'articles/:article_id/edits/:id' => 'articles#update', as: "update_article"
 
   delete 'articles/:id' => 'articles#destroy', as: 'article_delete'
 
   post "search" => "pages#search"
 
+  # ***** Katelyn edit routes below *****
+
+  get "articles/:article_id/edits/new" => "edits#new", as: "new_edit"
+  post "articles/:article_id/edits" => "edits#create", as: "article_edits"
+
+  get "articles/:article_id/edits" => "edits#index", as: "view_all_edits"
+
+  get "edits/:id" => "edits#show", as: "edit"
 
 
   # The priority is based upon order of creation: first created -> highest priority.

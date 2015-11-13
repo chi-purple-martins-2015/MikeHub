@@ -1,0 +1,34 @@
+<div class="article_show">
+  <p class="edit-note">
+    Note: This file is a suggested edit to an existing article.
+    <br>
+    <% if current_user.articles.include?(@article) %>
+      <% if @edit.accepted %>
+        Status: Accepted on <%= @edit.updated_at.strftime('%B %e, %Y') %>
+      <% else %>
+        <%= link_to "Click here", update_article_path(@article, @edit), method: :patch %> to accept this edit. (This will update the article to incorporate the changes below.)
+      <% end %>
+    <% else %>
+      If you are the author of the original article, you can log in to review and accept this edit.
+    <% end %>
+  </p>
+
+  <h3><%= @edit.title %></h3>
+  <h2><%= @edit.subtitle %></h2>
+  <span class="article-byline">
+    Edit suggested by <%= link_to @edit.editor.full_name, user_path(@edit.editor) %>.
+    Original article can be found <%= link_to "here", @article %>
+  </span>
+  <br>
+  <span class="article-byline">
+    This edit
+    <% if @edit.accepted %>
+      has
+    <% else %>
+      has not yet
+    <% end %>
+    been accepted by the article's author.
+  </span>
+  <p><%= @edit.content.html_safe %></p>
+
+</div>

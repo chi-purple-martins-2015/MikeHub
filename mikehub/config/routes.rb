@@ -28,6 +28,10 @@ Rails.application.routes.draw do
 
   post "search" => "pages#search"
 
+  namespace :admin do
+    get 'users/:id' => 'users#delete'
+  end
+
   # post "/search"
 
   # The priority is based upon order of creation: first created -> highest priority.

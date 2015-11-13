@@ -9,3 +9,7 @@
      <% end %>
   </ul>
 </div>
+
+<% if admin_logged_in? %>
+  Delete this user by clicking <%= link_to "here", admins_delete_path %>
+<% end %>

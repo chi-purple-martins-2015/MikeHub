@@ -12,7 +12,10 @@ Rails.application.routes.draw do
 
   post 'users/create' => 'users#create'
 
-  get 'users/delete'
+  delete 'users/:id' => '/admins/user#destroy'
+  # namespace :admin do
+  #   delete 'users/:id' => 'admin/users#destroy'
+  # end
 
   get 'users/:id' => 'users#show', as: "user"
 
@@ -28,9 +31,8 @@ Rails.application.routes.draw do
 
   post "search" => "pages#search"
 
-  namespace :admin do
-    get 'users/:id' => 'users#delete'
-  end
+  # delete 'admin/users/:id' => 'users#delete'
+
 
   # post "/search"
 

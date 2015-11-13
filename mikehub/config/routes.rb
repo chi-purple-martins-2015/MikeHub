@@ -28,6 +28,16 @@ Rails.application.routes.draw do
 
   post "search" => "pages#search"
 
+  # ***** Katelyn edit routes below *****
+
+  get "articles/:article_id/edits/new" => "edits#new"
+  post "articles/:article_id/edits" => "edits#create", as: "edits"
+  get "edits/:id" => "edits#show"
+
+
+
+
+
   # post "/search"
 
   # The priority is based upon order of creation: first created -> highest priority.

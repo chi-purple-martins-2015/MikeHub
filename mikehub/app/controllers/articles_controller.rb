@@ -27,6 +27,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:article_id])
     @edit = Edit.find(params[:id])
     @article.update_attributes(title: @edit.title, subtitle: @edit.subtitle, content: @edit.content)
+    @edit.update_attribute(:accepted, true)
     redirect_to @article
   end
 

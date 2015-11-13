@@ -1,6 +1,7 @@
 class EditsController < ApplicationController
   def new
-    @edit = Edit.new
+    article = Article.find(params[:article_id])
+    @edit = Edit.new(title: article.title, subtitle: article.subtitle, content: article.content)
   end
 
   def create
@@ -12,6 +13,9 @@ class EditsController < ApplicationController
       @errors = @edit.errors.full_messages
       render 'new'
     end
+  end
+
+  def show
   end
 
   private

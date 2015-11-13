@@ -12,6 +12,6 @@
 
   <h3><%= @article.title %></h3>
   <h2><%= @article.subtitle %></h2>
-  <span class="article-byline">Written by <%= link_to @article.author.full_name, user_path %></span>
+  <span class="article-byline">Written by <%= link_to @article.author.full_name, user_path(@article.author) %></span>
   <p><%= @article.content.html_safe %></p>
 </div>

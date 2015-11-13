@@ -7,5 +7,5 @@
 
   <h3><%= @article.title %></h3>
   <h2><%= @article.subtitle %></h2>
-  <p><%= @article.content.html_safe %></p>
+  <p><%= make_html(@article.content)%></p>
 </div>

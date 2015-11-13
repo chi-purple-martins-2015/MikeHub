@@ -81,6 +81,10 @@ hr {
   list-style-type: none;
 }
 
+.articles-list li {
+  margin-top: 1em;
+}
+
 .article-link, .article-link:visited {
   font-family: Helvetica, sans-serif;
   font-size: 14pt;

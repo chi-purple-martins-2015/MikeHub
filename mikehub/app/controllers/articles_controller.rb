@@ -17,6 +17,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @edits = @article.edits
   end
 
   def edit
@@ -27,11 +28,6 @@ class ArticlesController < ApplicationController
     @edit = Edit.find(params[:id])
     @article.update_attributes(title: @edit.title, subtitle: @edit.subtitle, content: @edit.content)
     redirect_to @article
-    # if @article.update(article_params)
-    #   redirect_to article_path(@article)
-    # else
-    #   render 'edit'
-    # end
   end
 
   def destroy

@@ -12,7 +12,9 @@
 <body>
   <header>
     <p class="header-links">
-      <% if logged_in? %>
+     <% if admin_logged_in? %>
+        Hello, <%=  current_user.first_name %>! <%= link_to "Admin", articles_new_path %> | <%= link_to "Log out", sessions_logout_path %>
+      <% elsif logged_in? %>
         Hello, <%= current_user.first_name %>! <%= link_to "Log out", sessions_logout_path %> | <%= link_to "Create a new article", articles_new_path %>
       <% else %>
         Hello, guest! <%= link_to "Log in", sessions_login_path %> or <%= link_to "Register", users_new_path %>

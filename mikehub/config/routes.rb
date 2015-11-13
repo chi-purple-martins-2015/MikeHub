@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   post 'users/create' => 'users#create'
 
-  get 'users/delete'
+  delete 'users/:id' => 'users#destroy', as: "user_delete"
 
   get 'users/:id' => 'users#show', as: "user"
 
@@ -26,6 +26,8 @@ Rails.application.routes.draw do
 
   patch 'articles/:id' => 'articles#update'
 
+  delete 'articles/:id' => 'articles#destroy', as: 'article_delete'
+
   post "search" => "pages#search"
 
   # ***** Katelyn edit routes below *****
@@ -33,12 +35,6 @@ Rails.application.routes.draw do
   get "articles/:article_id/edits/new" => "edits#new"
   post "articles/:article_id/edits" => "edits#create", as: "article_edits"
   get "edits/:id" => "edits#show", as: "edit"
-
-
-
-
-
-  # post "/search"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

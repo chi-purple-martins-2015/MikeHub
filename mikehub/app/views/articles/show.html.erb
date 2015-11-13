@@ -12,6 +12,9 @@
 
   <h3><%= @article.title %></h3>
   <h2><%= @article.subtitle %></h2>
+  <p><%= find_subheading(@article).html_safe %></p>
+</div>
+
 
   <span class="article-byline">Written by <%= link_to @article.author.full_name, user_path(@article.author) %></span>
   <br>
@@ -31,3 +34,4 @@
   <% end %>
   <p><%= make_html(@article.content)%></p>
 </div>
+

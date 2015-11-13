@@ -10,7 +10,7 @@
           <br>
           <span class="article-list-subtitle"><%= article.subtitle %></span>
           <br>
-          <span class="article-list-excerpt"><%= article.content[0..180] %>...</span>
+          <span class="article-list-excerpt"><%= short_body(article.content) %>...</span>
           <br>
           <br>
         </li>
@@ -28,9 +28,7 @@
           <br>
           <span class="article-list-subtitle"><%= article.subtitle %></span>
           <br>
-          <span class="article-list-excerpt"><%= article.content[0..80] %>...</span>
-          <br>
-          <br>
+
         </li>
       <% end %>
     </ul>

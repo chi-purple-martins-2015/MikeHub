@@ -1,0 +1,18 @@
+<div style="width: 900px; margin:auto;">
+<%= form_for @edit do |f| %>
+  <p><%= label_tag "Article title" %>:
+  <%= f.text_field :title %>
+  <%= label_tag "Article Subtitle" %>:
+  <%= f.text_field :subtitle %></p>
+<textarea name="article[content]" >
+
+
+</textarea>
+<%= submit_tag "Submit" %>
+<% end %>
+
+
+<script>
+    CKEDITOR.replace( 'article[content]' );
+</script>
+<div>

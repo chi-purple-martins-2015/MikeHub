@@ -4,7 +4,7 @@ class CreateEdits < ActiveRecord::Migration
       t.references :article, index: true, foreign_key: true
       t.integer :editor_id
       t.text :content
-      t.boolean :accepted
+      t.boolean :accepted, default: false
       t.string :title
       t.string :subtitle
 

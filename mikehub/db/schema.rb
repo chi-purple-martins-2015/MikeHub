@@ -29,11 +29,11 @@ ActiveRecord::Schema.define(version: 20151111195237) do
     t.integer  "article_id"
     t.integer  "editor_id"
     t.text     "content"
-    t.boolean  "accepted"
+    t.boolean  "accepted",   default: false
     t.string   "title"
     t.string   "subtitle"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   add_index "edits", ["article_id"], name: "index_edits_on_article_id", using: :btree
